@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 5)</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - (min)) + (min));
+    }
+
+    let maxArrLength = prompt("Số phần tử tối đa");
+    let minNum = parseInt(prompt("Nhập giá trị nhỏ nhất"));
+    let maxNum = parseInt(prompt("Nhập giá trị lớn nhất"));
+    let arr = [];
+    while (arr.length < maxArrLength) {
+        let randNum = getRandomInt(minNum, maxNum)
+        if (arr.indexOf(randNum) === -1) {
+            arr.push(randNum);
+        }
+    }
+
+    let arrNegative = [];
+    for (let i = 0; i < maxArrLength; i++) {
+        if (arr[i] < 0) {
+            arrNegative.push(arr[i])
+        }
+    }
+    document.write('Chuỗi được tạo: ' + arr.join(", ") + "<br/>");
+    document.write('Số lượng số nguyên âm là: ' + arrNegative.length)
+</script>
+</body>
+</html>

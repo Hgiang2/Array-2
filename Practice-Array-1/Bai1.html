@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 1)</title>
+</head>
+<body>
+<script>
+  let arr = [];
+  let arrResult = [];
+  for (let i=0; i < 10; i++) {
+      arr[i] =parseInt(prompt('Nhập số nguyên thứ ' + (i+1)));
+      if (arr[i] >= 10) {
+          arrResult.push(arr[i]);
+      }
+  }
+  alert('Có ' + arrResult.length + ' số nguyên lớn hơn hoặc bằng 10');
+</script>
+</body>
+</html>

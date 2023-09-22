@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 4)</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    let maxArrLength = prompt("Số phần tử tối đa");
+    let minNum = prompt("Nhập giá trị nhỏ nhất");
+    let maxNum = prompt("Nhập giá trị lớn nhất");
+    let arr = [];
+    while (arr.length < maxArrLength) {
+        let randNum = getRandomInt(minNum, maxNum)
+        if (arr.indexOf(randNum) === -1) {
+            arr.push(randNum);
+        }
+    }
+
+    document.write('Mảng tạo: ' + arr.join(", ") + "<br/>");
+    document.write('Mảng đảo ngược: ' + arr.reverse().join(", "))
+</script>
+</body>
+</html>

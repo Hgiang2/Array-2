@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Faking Textarea on Typing</title>
+  <style>
+      * {
+          box-sizing: border-box;
+          font-family: "Comic Sans MS", sans-serif;
+      }
+
+      body {
+          margin: 50px auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      textarea {
+          padding: 10px;
+          font-size: 30px;
+      }
+  </style>
+</head>
+<body>
+<h1>Type something slowly</h1>
+<textarea onkeydown="fakeText()" id="text" cols="50" rows="5" placeholder=""></textarea>
+
+<script src="Faketext.js"></script>
+</body>
+</html>

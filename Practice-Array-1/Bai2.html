@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 2)</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+
+    let maxArrLength = prompt("Số phần tử tối đa");
+    let minNum = prompt("Nhập giá trị nhỏ nhất");
+    let maxNum = prompt("Nhập giá trị lớn nhất");
+    let arr = [];
+    while (arr.length < maxArrLength) {
+        let randNum = getRandomInt(minNum, maxNum)
+        if (arr.indexOf(randNum) === -1) {
+            arr.push(randNum);
+        }
+    }
+
+
+    let maxVal = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        if (maxVal < arr[i]) {
+            maxVal = arr[i];
+        }
+    }
+
+    document.write("Mảng tạo: " + arr.join(" , ") + "<br/>")
+    document.write('Phần từ có giá trị lớn nhất trong mảng là ' + maxVal + ' ở vị trí thứ ' + arr.indexOf(maxVal))
+</script>
+</body>
+</html>

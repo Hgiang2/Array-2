@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 2 (bài 4)</title>
+</head>
+<body>
+<script>
+  let str = prompt('Nhập vào một chuỗi bất kì: ');
+  let arr=Array.from(str);
+  let count =0;
+  for (let i in arr) {
+      if (arr[i] == " ") {
+          count++;
+      }
+  }
+  alert('Mảng có ' + (count +1) + " từ" )
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 9)</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - (min)) + (min));
+    }
+
+    let maxArrLengthA = prompt("Số phần tử tối đa của mảng A");
+    let minNumA = parseInt(prompt("Nhập giá trị nhỏ nhất mảng A"));
+    let maxNumA = parseInt(prompt("Nhập giá trị lớn nhất mảng A"));
+    let arrA = [];
+    while (arrA.length < maxArrLengthA) {
+        let randNum = getRandomInt(minNumA, maxNumA)
+        if (arrA.indexOf(randNum) === -1) {
+            arrA.push(randNum);
+        }
+    }
+    alert('Mảng A: ' + arrA.join(", "));
+
+    let maxArrLengthB = prompt("Số phần tử tối đa của mảng B");
+    let minNumB = parseInt(prompt("Nhập giá trị nhỏ nhất mảng B"));
+    let maxNumB = parseInt(prompt("Nhập giá trị lớn nhất mảng B"));
+    let arrB = [];
+    while (arrB.length < maxArrLengthB) {
+        let randNum = getRandomInt(minNumB, maxNumB)
+        if (arrB.indexOf(randNum) === -1) {
+            arrB.push(randNum);
+        }
+    }
+    alert('Mảng B: ' + arrB.join(", "));
+    alert('Mảng C: ' + arrB.concat(arrA).join(", "));
+</script>
+</body>
+</html>

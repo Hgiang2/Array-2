@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Luyện tập mảng 1 (bài 8)</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - (min)) + (min));
+    }
+
+    let maxArrLength = prompt("Số phần tử tối đa");
+    let minNum = parseInt(prompt("Nhập giá trị nhỏ nhất"));
+    let maxNum = parseInt(prompt("Nhập giá trị lớn nhất"));
+    let arr = [];
+    while (arr.length < maxArrLength) {
+        let randNum = getRandomInt(minNum, maxNum)
+        if (arr.indexOf(randNum) === -1) {
+            arr.push(randNum);
+        }
+        arr.sort((a, b) => b- a);
+        // arr.sort(function (a,b) {
+        //     return b- a
+        // })
+    }
+    document.write(arr.join(", "));
+
+</script>
+</body>
+</html>

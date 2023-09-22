@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dictionary</title>
+  <style>
+      body {
+          margin: 50px 50px;
+      }
+
+    h1 {
+        font-family: "Nexa Bold", sans-serif;
+        font-size: 21px;
+    }
+  </style>
+</head>
+<body>
+<h1>Từ điển</h1>
+<form action="" method="get">
+  <input id="word" type="text" placeholder="Nhập từ cần tìm kiếm">
+  <button onclick="search()">Search</button>
+  <p id="result"></p>
+</form>
+<script>
+    function search () {
+        let arrEng = ["Ant", "Bee", "Squirrel", "Dog", "Mouse"];
+        let arrVie = ["Kiến", "Ong", "Sóc", "Chó", "Chuột"];
+        let word = document.getElementById('word').value;
+        let result=0;
+        let i = arrEng.indexOf(word);
+
+        if (i!=-1) {
+            result=arrVie[i];
+        } else {
+            result='Không tìm thấy từ khóa';
+        }
+        alert(result);
+    }
+</script>
+</body>
+</html>
